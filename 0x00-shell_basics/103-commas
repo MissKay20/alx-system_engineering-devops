@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -p1a | grep -E -v '/$' | grep -E -v '^\.$|^\.\.$' | LC_COLLATE=C sort -df | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g'
